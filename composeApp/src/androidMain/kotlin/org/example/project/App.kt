@@ -1,3 +1,6 @@
+package org.example.project
+
+import MainScreen
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
@@ -13,17 +16,16 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import org.example.project.ui.components.BankingScreen
 
 @Composable
 fun App() {
     BankingAppTheme {
-        // A surface container using the 'background' color from the theme
+        // Contenedor principal
         Surface(
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
-            BankingScreen()
+            MainScreen() // Inicia la navegación principal con LoadingScreen y BankingScreen
         }
     }
 }
@@ -92,27 +94,34 @@ fun BankingAppTheme(
     }
 }
 
-// Colores del tema
-private val md_theme_dark_primary = Color(0xFF4CAF50)
+// Colores del tema llamativo
+private val md_theme_dark_primary = Color(0xFFFF6F00) // Naranja vivo
 private val md_theme_dark_onPrimary = Color(0xFFFFFFFF)
-private val md_theme_dark_primaryContainer = Color(0xFF1B5E20)
-private val md_theme_dark_onPrimaryContainer = Color(0xFFA5D6A7)
-private val md_theme_dark_secondary = Color(0xFF2196F3)
+private val md_theme_dark_primaryContainer = Color(0xFFFFA040) // Naranja más suave
+private val md_theme_dark_onPrimaryContainer = Color(0xFF4E2600)
+
+private val md_theme_dark_secondary = Color(0xFF00C853) // Verde brillante
 private val md_theme_dark_onSecondary = Color(0xFFFFFFFF)
-private val md_theme_dark_secondaryContainer = Color(0xFF0D47A1)
-private val md_theme_dark_onSecondaryContainer = Color(0xFF90CAF9)
-private val md_theme_dark_tertiary = Color(0xFF9C27B0)
+private val md_theme_dark_secondaryContainer = Color(0xFF66FFA6) // Verde más claro
+private val md_theme_dark_onSecondaryContainer = Color(0xFF00391C)
+
+private val md_theme_dark_tertiary = Color(0xFF6200EA) // Morado vibrante
 private val md_theme_dark_onTertiary = Color(0xFFFFFFFF)
-private val md_theme_dark_tertiaryContainer = Color(0xFF4A148C)
-private val md_theme_dark_onTertiaryContainer = Color(0xFFE1BEE7)
-private val md_theme_dark_error = Color(0xFFCF6679)
-private val md_theme_dark_onError = Color(0xFF000000)
-private val md_theme_dark_errorContainer = Color(0xFFB00020)
-private val md_theme_dark_onErrorContainer = Color(0xFFFFCDD2)
-private val md_theme_dark_background = Color(0xFF121212)
-private val md_theme_dark_onBackground = Color(0xFFFFFFFF)
-private val md_theme_dark_surface = Color(0xFF121212)
-private val md_theme_dark_onSurface = Color(0xFFFFFFFF)
-private val md_theme_dark_surfaceVariant = Color(0xFF2C2C2C)
-private val md_theme_dark_onSurfaceVariant = Color(0xFFE0E0E0)
-private val md_theme_dark_outline = Color(0xFF938F99)
+private val md_theme_dark_tertiaryContainer = Color(0xFFB388FF) // Lavanda
+private val md_theme_dark_onTertiaryContainer = Color(0xFF21005F)
+
+private val md_theme_dark_error = Color(0xFFFF5252) // Rojo vivo
+private val md_theme_dark_onError = Color(0xFFFFFFFF)
+private val md_theme_dark_errorContainer = Color(0xFFFFD7D7)
+private val md_theme_dark_onErrorContainer = Color(0xFF690000)
+
+private val md_theme_dark_background = Color(0xFF1E1E1E) // Gris oscuro
+private val md_theme_dark_onBackground = Color(0xFFECECEC) // Blanco suave
+
+private val md_theme_dark_surface = Color(0xFF2E2E2E) // Gris un poco más claro
+private val md_theme_dark_onSurface = Color(0xFFECECEC)
+
+private val md_theme_dark_surfaceVariant = Color(0xFF424242) // Gris intermedio
+private val md_theme_dark_onSurfaceVariant = Color(0xFFE8E8E8)
+
+private val md_theme_dark_outline = Color(0xFF9E9E9E) // Gris claro
